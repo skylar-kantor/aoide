@@ -1,0 +1,216 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"math"
+	"os"
+	"strings"
+	"time"
+
+	//UI Elements
+	"github.com/charmbracelet/bubbles/progress"
+	"github.com/charmbracelet/bubbles/table"
+	"github.com/charmbracelet/bubbles/textinput"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
+
+	//Audio / mp3
+	"github.com/dhowden/tag"
+	"github.com/hajimehoshi/go-mp3"
+	
+)
+
+const (
+	padding = 2
+	madWidth = 80
+)
+
+var (
+	//Lipgloss styles for UI elements
+	filesStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	winStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	playlistStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	playerStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	infoStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	buttonStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	titleStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	mainStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+	playingStyle = lipgloss.NewStyle().Foregrond(lipgloss.Color("10")).Italic(true).Render
+
+	//Timing vars
+	totalLen = 0
+	currentLen = 0
+
+	//Player elements
+	paused = false
+	playText = buttonStyle("||")
+
+	//Playlist
+	rows = []row(
+		{table.Row{},"",false,0,0},
+	)
+	
+	columns = []table.Column{
+		{Title: "Title", Width: 20},
+		{Title: "Artist", Width: 20},
+		{Title: "Album", Width: 20},
+		{Title: "Time", Width: 20},
+	}
+)
+
+type model struct {
+	playBar  progress.Model
+	playlist table.Model
+	fileAdd  textinput.Model
+}
+
+type row struct {
+	visibleRow table.Row
+	filename string
+	playing bool
+	time int
+	tablePos int
+}
+
+type tickMsg time.time
+
+
+func (m model) Init() tea.Cmd{
+	//Get the 1sec timer started
+	return tickCmd()
+}
+
+
+
+
+func (m model) UpdatePlaylist(newIdx int) {
+	rs := m.table.Rows()
+	if newIdx == 0 { return }
+
+	//Remove everything before the file we're about to play
+	rows[newIdx].playing = true
+	rows = rows[newIdx:]
+
+	m.table.SetRows(MakeVisibleRows())
+
+	//TODO Extract to separate function
+	//Play the new file
+	log.Default().Printf("Playing %s", rows[newIdx].filename)
+	//stop playing whatever is currently playing
+	//close the file
+	//open the new file
+	//play it
+}
+
+func MakeVisibleRows() []table.Row {
+	var visibleRos []table.Row
+
+	for _,r := range rows {
+		r.visibleRow[3] = fmt.Sprintf("%02d:%02d", r.time/60, r.time%60)
+		
+		if r.playing && !strings.Contains(r.visibleRow[0], ">") {
+			r.visibleRow[0] = playingStyle(">" + r.visbleRow[0])
+		}
+		visibleRows = append(visibleRows, r.visibleRow)
+
+	}
+	return visibleRows
+}
+
+func AddFileToPlaylist(fName string) row {
+	var title, album, artist string
+
+	tNewMp3, err = os.Open(fName)
+	if err != nil {
+		log.Default().Fatalf("Error opening file %s: %s", fName, err)
+	}
+
+	fTags, err = tag.ReadFrom(tNewMp3)
+	if err != nil
+	{
+		if err == "no tags found" {
+			log.Default().Printf("No tags found for %s. Using defauts", fName)
+			title = fName
+			artist = "No Artist"
+			album = "No Album"
+		} else if err == "invalid argument" {
+			log.Default().Fatalf("File not found: %s", fName)
+		} else {
+			log.Default().Fatalf("%v", err)
+		}
+	} else {
+		title = fTags.Title()
+		album
+
+
+		= fTags.Album()
+
+		artist = fTags.Artist()
+		if title == "" { title = fName }
+		if artist == "" { artist = "No Artist" 
+
+	
+}
+
+funt (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+
+	case tea.KeyMsg:
+		switch msg.String {
+		case "ctrl+c", "q":
+			return m, tea.Quit
+	case "p", " ":
+		paused = !paused
+		if paused {
+			playText = ">"
+		} else {
+			playText = "||"
+		}
+	case "l", ".":
+		currentLen = int(math.Min(float64(totalLen), float64(currentLen+5)))
+	case "j", ",":
+		currentLen = int(math.Max(float64(0), float64(currentLen-5)))
+	case "tab", "shift+tab":
+		if m.table.Focused {
+			m.table.Blur()
+			m.fileAdd.Focus()
+		} else {
+			m.fileAdd.Blur()
+			m.table.Focus()
+		}
+	case "enter":
+		if m.fileAdd.Focused() {
+			rows = append(rows, AddFileToPlaylist(m))
+			m.table.SetRows(makeVisibleRows())
+			m.fileAdd.Reset()
+			m.fileAdd.Blur()
+			m.table.Focus()
+		} else if m.table.Focused() {m.UpdatePlaylist(m.table.Cursor())}
+	}
+	case tea.WindowSizeMsg:
+		m.progress.Width = int(math.Min(float64(msg.Width - padding*2 - 4), float64(maxWidth)))
+		return m, nil
+
+	case tickMsg:
+		if m.progress.Percent() == 1.0 && len(rows) > 1 { m.UpdatePlaylist(1) }
+
+		if !paused { currentLen++ }
+
+		cmd := m.progress.SetPrecent(float64(currentLen)/float64(totalLen))
+		return m, tea.Batch(tickCmd(), cmd)
+	case progress.FrameMsg:
+		progressModel, cmd := m.progress.Update(msg)
+		m.progress.progressModel.(progress.Model)
+		return m, cmd
+	default:
+		return m, nil
+	
+	}
+	var tblCmd, tiCmd, progCmd tea.Cmd
+	m.table, tblCmd = m.table.Update(msg)
+	m.fileAdd, tiCmd = m.fileAdd.Update(msg)
+	m.progress, progCmd = m.progress.Update(msg)
+	return m, tea.Batch(tiCmd, tblCmd, progCmd)
+}
+
