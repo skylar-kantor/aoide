@@ -27,16 +27,14 @@ const (
 
 var (
 	//Lipgloss styles for UI elements
-	styleFiles    = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	winStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	playlistStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	playerStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	infoStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	buttonStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	titleStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	mainStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	playingStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-
+	StyleFilePicker = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StyleWindow     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StylePlaylist   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StylePlayer     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StyleTime       = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StylePlayText   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StyleTitle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	StyleApp        = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	//Timing vars
 	//TODO clean this up. These should live right where they're needed in playing
 	totalLen   = 120
@@ -44,9 +42,10 @@ var (
 
 	//Player elements
 	paused   = false
-	playText = buttonStyle("⏸")
+	playText = StylePlayText("⏸")
 
 	//Playlist
+	//This should start empty
 	rows = []table.Row{{"Dawson's Christian", "Leslie Fish", "Carmen Miranda's Ghost", "", "120", "0"}}
 
 	columns = []table.Column{
@@ -227,22 +226,22 @@ func (m model) View() string {
 	pad := strings.Repeat(" ", padding)
 	//halfPad := strings.Repeat(" ", padding/2)
 
-	timeProgress := infoStyle(fmt.Sprintf("\t%02d:%02d/%02d:%02d\t", currentLen/60, currentLen%60, totalLen/60, totalLen%60))
+	timeProgress := StyleTime(fmt.Sprintf("\t%02d:%02d/%02d:%02d\t", currentLen/60, currentLen%60, totalLen/60, totalLen%60))
 
-	nowPlaying := styleFiles(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
+	nowPlaying := StyleFilePicker(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
 
-	playlist := playlistStyle(lipgloss.JoinVertical(lipgloss.Left,
-		titleStyle("Playlist"),
+	playlist := StylePlaylist(lipgloss.JoinVertical(lipgloss.Left,
+		StyleTitle("Playlist"),
 		m.playlist.View(),
 		m.fileAdd.View(),
 	))
 
-	player := playerStyle(lipgloss.JoinVertical(lipgloss.Left,
+	player := StylePlayer(lipgloss.JoinVertical(lipgloss.Left,
 		nowPlaying,
 		lipgloss.JoinHorizontal(lipgloss.Right, playText, pad, m.playBar.View(), timeProgress),
 	))
 
-	return mainStyle(lipgloss.JoinHorizontal(lipgloss.Center, player, playlist))
+	return StyleApp(lipgloss.JoinHorizontal(lipgloss.Center, player, playlist))
 }
 
 func main() {
