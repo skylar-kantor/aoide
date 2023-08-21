@@ -17,45 +17,46 @@ import (
 
 	//Audio / mp3
 	"github.com/dhowden/tag"
-	//	"github.com/hajimehoshi/go-mp3"
-	
+	//"github.com/hajimehoshi/go-mp3"
 )
 
 const (
-	padding = 2
+	padding  = 2
 	maxWidth = 80
 )
 
 var (
 	//Lipgloss styles for UI elements
-	filesStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	winStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	styleFiles    = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	winStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	playlistStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	playerStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	infoStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	buttonStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	titleStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	mainStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	playingStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	playerStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	infoStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	buttonStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	titleStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	mainStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
+	playingStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 
 	//Timing vars
-	totalLen = 0
+	//TODO clean this up. These should live right where they're needed in playing
+	totalLen   = 120
 	currentLen = 0
 
 	//Player elements
-	paused = false
-	playText = buttonStyle("||")
+	paused   = false
+	playText = buttonStyle("⏸")
 
 	//Playlist
-	rows = []row{
-		{table.Row{"Dawson's Christian", "Leslie Fish", "Carmen Miranda's Ghost", ""},"",true,120,0},
-	}
-	
+	rows = []table.Row{{"Dawson's Christian", "Leslie Fish", "Carmen Miranda's Ghost", "", "120", "0"}}
+
 	columns = []table.Column{
 		{Title: "Title", Width: 20},
 		{Title: "Artist", Width: 20},
 		{Title: "Album", Width: 20},
 		{Title: "Time", Width: 20},
+		{Title: "", Width: 0},
+		{Title: "", Width: 0},
+		{Title: "", Width: 0},
 	}
 )
 
@@ -67,50 +68,40 @@ type model struct {
 
 type row struct {
 	visibleRow table.Row
-	filename string
-	playing bool
-	time int
-	tablePos int
+	filename   string
+	playing    bool
+	time       int
+	tablePos   int
 }
 
 type tickMsg time.Time
 
 func (m model) UpdatePlaylist(newIdx int) {
-	if newIdx == 0 { return }
+	if newIdx == 0 {
+		return
+	}
 	//Remove everything before the file we're about to play
-	rows[newIdx].playing = true
 	rows = rows[newIdx:]
 
-	m.playlist.SetRows(MakeVisibleRows())
+	m.playlist.SetRows(rows)
 
-	//TODO Extract to separate function
+	//TODO Extract to separate function?
 	//Play the new file
-	log.Default().Printf("Playing %s", rows[newIdx].filename)
+	log.Default().Printf("Playing %s", rows[newIdx][4])
 	//stop playing whatever is currently playing
 	//close the file
+	//Can't defer close, bec that runs on return, so
+	//if isPlaying {
+	// Close()
+	//}
 	//open the new file
 	//play it
 }
 
-func MakeVisibleRows() []table.Row {
-	var visibleRows []table.Row
-
-	for _,r := range rows {
-		r.visibleRow[3] = fmt.Sprintf("%02d:%02d", r.time/60, r.time%60)
-		
-		if r.playing && !strings.Contains(r.visibleRow[0], ">") {
-			r.visibleRow[0] = playingStyle(">" + r.visibleRow[0])
-		}
-		visibleRows = append(visibleRows, r.visibleRow)
-
-	}
-	return visibleRows
-}
-
-func AddFileToPlaylist(m model) row {
+func AddFileToPlaylist(m model) table.Row {
 
 	fName := m.fileAdd.Value()
-	
+
 	var title, album, artist string
 
 	tNewMp3, err := os.Open(fName)
@@ -134,29 +125,35 @@ func AddFileToPlaylist(m model) row {
 		title = fTags.Title()
 		album = fTags.Album()
 		artist = fTags.Artist()
-		if title == "" { title = fName }
-		if artist == "" { artist = "No Artist" }
-		if album == "" { album = "No Album" }
+		if title == "" {
+			title = fName
+		}
+		if artist == "" {
+			artist = "No Artist"
+		}
+		if album == "" {
+			album = "No Album"
+		}
 
 		tableIdx := len(m.playlist.Rows())
-		rowToAdd := row{table.Row{title, artist, album, ""}, fName, false, 0, tableIdx}
+		rowToAdd := table.Row{title, artist, album, fName, "false", "0", fmt.Sprint(tableIdx)}
 		return rowToAdd
-	
+
 	}
-	return row{table.Row{}, "", false, 0, -1}
+	return table.Row{"", "0", "-1"}
 }
 
 func tickCmd() tea.Cmd {
 	return tea.Tick(time.Second, func(t time.Time) tea.Msg {
 		return tickMsg(t)
-		})
+	})
 }
 
-func (m model) Init() tea.Cmd{
+func (m model) Init() tea.Cmd {
 	//Get the 1sec timer started
 	return tickCmd()
 }
-	
+
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 
@@ -167,41 +164,40 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "p", " ":
 			paused = !paused
 			if paused {
-				playText = ">"
+				playText = "⏵"
 			} else {
-				playText = "||"
+				playText = "⏸"
 			}
 		case "l", ".":
 			currentLen = int(math.Min(float64(totalLen), float64(currentLen+5)))
 		case "j", ",":
 			currentLen = int(math.Max(float64(0), float64(currentLen-5)))
 		case "tab", "shift+tab":
-			if m.playlist.Focused() {
-				m.playlist.Blur()
-				m.fileAdd.Focus()
-			} else {
-				m.fileAdd.Blur()
-				m.playlist.Focus()
-			}
+			m.switchFocus()
 		case "enter":
 			if m.fileAdd.Focused() {
 				rows = append(rows, AddFileToPlaylist(m))
-				m.playlist.SetRows(MakeVisibleRows())
+				m.playlist.SetRows(rows)
 				m.fileAdd.Reset()
-				m.fileAdd.Blur()
-				m.playlist.Focus()
-			} else if m.playlist.Focused() { m.UpdatePlaylist(m.playlist.Cursor())}
-	}
+				m.switchFocus()
+			} else if m.playlist.Focused() {
+				m.UpdatePlaylist(m.playlist.Cursor())
+			}
+		}
 	case tea.WindowSizeMsg:
-		m.playBar.Width = int(math.Min(float64(msg.Width - padding*2 - 4), float64(maxWidth)))
+		m.playBar.Width = int(math.Min(float64(msg.Width-padding*2-4), float64(maxWidth)))
 		return m, nil
 
 	case tickMsg:
-		if m.playBar.Percent() == 1.0 && len(rows) > 1 { m.UpdatePlaylist(1) }
+		if m.playBar.Percent() == 1.0 && len(rows) > 1 {
+			m.UpdatePlaylist(1)
+		}
 
-		if !paused { currentLen++ }
+		if !paused {
+			currentLen++
+		}
 
-		cmd := m.playBar.SetPercent(float64(currentLen)/float64(totalLen))
+		cmd := m.playBar.SetPercent(float64(currentLen) / float64(totalLen))
 		return m, tea.Batch(tickCmd(), cmd)
 	case progress.FrameMsg:
 		progressModel, cmd := m.playBar.Update(msg)
@@ -209,12 +205,22 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, cmd
 	default:
 		return m, nil
-	
+
 	}
 	var tblCmd, tiCmd tea.Cmd
 	m.playlist, tblCmd = m.playlist.Update(msg)
 	m.fileAdd, tiCmd = m.fileAdd.Update(msg)
 	return m, tea.Batch(tiCmd, tblCmd)
+}
+
+func (m model) switchFocus() {
+	if m.playlist.Focused() {
+		m.playlist.Blur()
+		m.fileAdd.Focus()
+	} else {
+		m.fileAdd.Blur()
+		m.playlist.Focus()
+	}
 }
 
 func (m model) View() string {
@@ -223,7 +229,7 @@ func (m model) View() string {
 
 	timeProgress := infoStyle(fmt.Sprintf("\t%02d:%02d/%02d:%02d\t", currentLen/60, currentLen%60, totalLen/60, totalLen%60))
 
-	nowPlaying := filesStyle(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
+	nowPlaying := styleFiles(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
 
 	playlist := playlistStyle(lipgloss.JoinVertical(lipgloss.Left,
 		titleStyle("Playlist"),
@@ -236,7 +242,7 @@ func (m model) View() string {
 		lipgloss.JoinHorizontal(lipgloss.Right, playText, pad, m.playBar.View(), timeProgress),
 	))
 
-	return mainStyle(lipgloss.JoinHorizontal(lipgloss.Center, player, playlist))	
+	return mainStyle(lipgloss.JoinHorizontal(lipgloss.Center, player, playlist))
 }
 
 func main() {
@@ -249,15 +255,13 @@ func main() {
 
 	t := table.New(
 		table.WithColumns(columns),
-		table.WithRows(MakeVisibleRows()),
+		table.WithRows(rows),
 		table.WithFocused(true),
 		table.WithHeight(3),
 	)
 
 	f := textinput.New()
 	f.Placeholder = "Add files to playlist..."
-	
-
 	s := table.DefaultStyles()
 	s.Header = s.Header.
 		BorderStyle(lipgloss.NormalBorder()).
@@ -282,5 +286,5 @@ func main() {
 	if _, err := tea.NewProgram(m).Run(); err != nil {
 		fmt.Println("Fatal: ", err)
 		os.Exit(1)
-	}	
+	}
 }
