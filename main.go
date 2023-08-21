@@ -36,17 +36,17 @@ var (
 	StyleTitle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	StyleApp        = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	//Timing vars
-	//TODO clean this up. These should live right where they're needed in playing
+	// TODO clean this up. These should live right where they're needed in playing
 	totalLen   = 120
 	currentLen = 0
 
 	//Player elements
-	paused   = false
+	paused   = true
 	playText = StylePlayText("⏸")
 
 	//Playlist
 	//This should start empty
-	rows = []table.Row{{"Dawson's Christian", "Leslie Fish", "Carmen Miranda's Ghost", "", "120", "0"}}
+	rows = []table.Row{}
 
 	columns = []table.Column{
 		{Title: "Title", Width: 20},
@@ -227,8 +227,12 @@ func (m model) View() string {
 	//halfPad := strings.Repeat(" ", padding/2)
 
 	timeProgress := StyleTime(fmt.Sprintf("\t%02d:%02d/%02d:%02d\t", currentLen/60, currentLen%60, totalLen/60, totalLen%60))
-
-	nowPlaying := StyleFilePicker(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
+	var nowPlaying string
+	if len(rows) > 0 {
+		nowPlaying = StyleFilePicker(fmt.Sprintf("%s | %s | %s", m.playlist.Rows()[0][0][1:], m.playlist.Rows()[0][1], m.playlist.Rows()[0][2]))
+	} else {
+		nowPlaying = StyleFilePicker(fmt.Sprintf("\t | \t | \t"))
+	}
 
 	playlist := StylePlaylist(lipgloss.JoinVertical(lipgloss.Left,
 		StyleTitle("Playlist"),
