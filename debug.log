@@ -1,3 +1,47 @@
-DEBUG: 2023/08/14 14:31:22 Error opening file test: open test: no such file or directory
-DEBUG: 2023/08/21 13:57:35 Error opening file dsdsadsa: open dsdsadsa: no such file or directory
-DEBUG: 2023/08/21 14:02:14 Error opening file asdsadasdklj: open asdsadasdklj: no such file or directory
+    DEBUG: 2023/12/12 18:50:28 No title found, using default
+DEBUG: 2023/12/12 18:50:28 No artist found, using default
+DEBUG: 2023/12/12 18:50:28 No album found, using default
+DEBUG: 2023/12/12 18:50:28 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 18:50:28 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 18:50:28 Moving to position 1
+DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/12 18:50:28 Playing false
+DEBUG: 2023/12/12 18:50:33 No title found, using default
+DEBUG: 2023/12/12 18:50:33 No artist found, using default
+DEBUG: 2023/12/12 18:50:33 No album found, using default
+DEBUG: 2023/12/12 18:50:33 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 18:50:33 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 18:50:33 Moving to position 1
+DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/12 18:50:33 Playing false
+DEBUG: 2023/12/12 19:00:06 No title found, using default
+DEBUG: 2023/12/12 19:00:06 No artist found, using default
+DEBUG: 2023/12/12 19:00:06 No album found, using default
+DEBUG: 2023/12/12 19:00:06 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 19:00:06 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 19:00:07 No title found, using default
+DEBUG: 2023/12/12 19:00:07 No artist found, using default
+DEBUG: 2023/12/12 19:00:07 No album found, using default
+DEBUG: 2023/12/12 19:00:07 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 19:00:07 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/12 19:00:11 Song ended, moving on...
+DEBUG: 2023/12/12 19:00:11 Moving to position 1
+DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/12 19:00:11 Playing false
+DEBUG: 2023/12/12 19:33:31 No title found, using default
+DEBUG: 2023/12/12 19:33:31 No artist found, using default
+DEBUG: 2023/12/12 19:33:31 No album found, using default
+DEBUG: 2023/12/12 19:33:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 19:33:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 21:07:47 No title found, using default
+DEBUG: 2023/12/12 21:07:47 No artist found, using default
+DEBUG: 2023/12/12 21:07:47 No album found, using default
+DEBUG: 2023/12/12 21:07:47 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 21:07:47 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/12 21:07:52 Moving to position 0
