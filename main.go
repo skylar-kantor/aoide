@@ -14,9 +14,6 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	//Audio / mp3
-	//"github.com/dhowden/tag"
-	//"github.com/hajimehoshi/go-mp3"
 )
 
 var columns = []table.Column{

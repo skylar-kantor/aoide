@@ -87,3 +87,9 @@ DEBUG: 2023/12/13 13:41:29 Song ended, moving on...
 DEBUG: 2023/12/13 13:41:29 Moving to position 1
 DEBUG: 2023/12/13 13:41:29 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
 DEBUG: 2023/12/13 13:41:29 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
+DEBUG: 2023/12/26 13:43:46 No title found, using default
+DEBUG: 2023/12/26 13:43:46 No artist found, using default
+DEBUG: 2023/12/26 13:43:46 No album found, using default
+DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/26 13:43:49 Moving to position 0

@@ -7,15 +7,17 @@ import (
 	
 	"github.com/charmbracelet/bubbles/table"
 	"github.com/dhowden/tag"
+	"github.com/hajimehoshi/go-mp3"
+	"github.com/hajimehoshi/oto/v2"
 )
 
 
 var rows = []table.Row{}
-
-func (m model) ChangePosition(newIdx int) model{
+var player oto.Player
+func (m model) ChangePosition(newIdx int) (model, error) {
 	log.Default().Printf("Moving to position %d", newIdx)
 	if newIdx == 0 {
-		return m
+		return m, nil
 	}
 	log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
 	//Remove everything before the file we're about to play
@@ -23,16 +25,25 @@ func (m model) ChangePosition(newIdx int) model{
 	log.Default().Printf("Now, Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
 	//TODO Extract to separate function?
 	//Play the new file
-	//log.Default().Printf("Playing %s", rows[0][4])
-	//stop playing whatever is currently playing
-	//close the file
-	//Can't defer close, bec that runs on return, so
-	//if isPlaying {
-	// Close()
-	//}
-	//open the new file
-	//play it
-	return m
+	fileToPlay, err := os.Open(m.playlist.Rows()[0][5])
+	if err != nil {
+		return m, err
+	}
+	decodedMP3, err := mp3.NewDecoder(fileToPlay)
+	if err != nil {
+		return m, err
+	}
+	c, ready, err := oto.NewContext(decodedMP3.SampleRate(), 2, 2)
+	if err != nil {
+		return m, err
+	}
+	<-ready
+	if player.IsPlaying() {
+		player.Close()
+	}
+	player = c.NewPlayer(decodedMP3)
+	player.Play()
+	return m, nil
 }
 
 func (m model) AddFile()  model {
