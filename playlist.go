@@ -19,13 +19,11 @@ func (m model) ChangePosition(newIdx int) model{
 	}
 	log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
 	//Remove everything before the file we're about to play
-	rows = m.playlist.Rows()[newIdx:]
-	log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
-	m.playlist.SetRows(rows)
-	log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
+	m.playlist.SetRows(m.playlist.Rows()[newIdx:])
+	log.Default().Printf("Now, Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
 	//TODO Extract to separate function?
 	//Play the new file
-	log.Default().Printf("Playing %s", rows[0][4])
+	//log.Default().Printf("Playing %s", rows[0][4])
 	//stop playing whatever is currently playing
 	//close the file
 	//Can't defer close, bec that runs on return, so
@@ -78,7 +76,7 @@ func SongInfo(fTags tag.Metadata) (string,string,string, string) {
 	title := fTags.Title()
 	album := fTags.Album()
 	artist := fTags.Artist()
-	time := "0:00"
+	time := "2:00"
 	if title == "" {
 		log.Default().Print("No title found, using default")
 		title = "No Title"

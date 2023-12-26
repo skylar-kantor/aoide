@@ -38,12 +38,12 @@ func tickCmd() tea.Cmd {
 }
 
 func main() {
-	fErr, err := tea.LogToFile("debug.log", "DEBUG: ")
+	logFile, err := tea.LogToFile("debug.log", "DEBUG: ")
 	if err != nil {
 		fmt.Println("Fatal: Could not start logger, ", err)
 		os.Exit(1)
 	}
-	defer fErr.Close()
+	defer logFile.Close()
 
 	t := table.New(
 		table.WithColumns(columns),
