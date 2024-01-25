@@ -1,47 +1,95 @@
-    DEBUG: 2023/12/12 18:50:28 No title found, using default
-DEBUG: 2023/12/12 18:50:28 No artist found, using default
-DEBUG: 2023/12/12 18:50:28 No album found, using default
-DEBUG: 2023/12/12 18:50:28 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 18:50:28 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 18:50:28 Moving to position 1
-DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 18:50:28 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/12 18:50:28 Playing false
-DEBUG: 2023/12/12 18:50:33 No title found, using default
-DEBUG: 2023/12/12 18:50:33 No artist found, using default
-DEBUG: 2023/12/12 18:50:33 No album found, using default
-DEBUG: 2023/12/12 18:50:33 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 18:50:33 [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 18:50:33 Moving to position 1
-DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 18:50:33 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/12 18:50:33 Playing false
-DEBUG: 2023/12/12 19:00:06 No title found, using default
-DEBUG: 2023/12/12 19:00:06 No artist found, using default
-DEBUG: 2023/12/12 19:00:06 No album found, using default
-DEBUG: 2023/12/12 19:00:06 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 19:00:06 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 19:00:07 No title found, using default
-DEBUG: 2023/12/12 19:00:07 No artist found, using default
-DEBUG: 2023/12/12 19:00:07 No album found, using default
-DEBUG: 2023/12/12 19:00:07 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 19:00:07 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/12 19:00:11 Song ended, moving on...
-DEBUG: 2023/12/12 19:00:11 Moving to position 1
-DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/12 19:00:11 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/12 19:00:11 Playing false
-DEBUG: 2023/12/12 19:33:31 No title found, using default
-DEBUG: 2023/12/12 19:33:31 No artist found, using default
-DEBUG: 2023/12/12 19:33:31 No album found, using default
-DEBUG: 2023/12/12 19:33:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 19:33:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 21:07:47 No title found, using default
-DEBUG: 2023/12/12 21:07:47 No artist found, using default
-DEBUG: 2023/12/12 21:07:47 No album found, using default
-DEBUG: 2023/12/12 21:07:47 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 21:07:47 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/12 21:07:52 Moving to position 0
+DEBUG: 2023/12/13 13:31:31 No title found, using default
+DEBUG: 2023/12/13 13:31:31 No artist found, using default
+DEBUG: 2023/12/13 13:31:31 No album found, using default
+DEBUG: 2023/12/13 13:31:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:31:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:31:33 No title found, using default
+DEBUG: 2023/12/13 13:31:33 No artist found, using default
+DEBUG: 2023/12/13 13:31:33 No album found, using default
+DEBUG: 2023/12/13 13:31:33 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:31:33 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:31:35 Moving to position 1
+DEBUG: 2023/12/13 13:31:35 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:31:35 Now, Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:21 No title found, using default
+DEBUG: 2023/12/13 13:36:21 No artist found, using default
+DEBUG: 2023/12/13 13:36:21 No album found, using default
+DEBUG: 2023/12/13 13:36:21 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:36:21 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:36:24 No title found, using default
+DEBUG: 2023/12/13 13:36:24 No artist found, using default
+DEBUG: 2023/12/13 13:36:24 No album found, using default
+DEBUG: 2023/12/13 13:36:24 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:36:24 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:36:26 Moving to position 1
+DEBUG: 2023/12/13 13:36:26 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:26 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:29 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:29 Moving to position 1
+DEBUG: 2023/12/13 13:36:29 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:29 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:30 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:30 Moving to position 1
+DEBUG: 2023/12/13 13:36:30 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:30 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:31 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:31 Moving to position 1
+DEBUG: 2023/12/13 13:36:31 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:31 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:32 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:32 Moving to position 1
+DEBUG: 2023/12/13 13:36:32 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:32 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:33 Moving to position 1
+DEBUG: 2023/12/13 13:36:33 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:33 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:33 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:33 Moving to position 1
+DEBUG: 2023/12/13 13:36:33 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:33 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:36:34 Song ended, moving on...
+DEBUG: 2023/12/13 13:36:34 Moving to position 1
+DEBUG: 2023/12/13 13:36:34 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
+DEBUG: 2023/12/13 13:36:34 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
+DEBUG: 2023/12/13 13:41:18 No title found, using default
+DEBUG: 2023/12/13 13:41:18 No artist found, using default
+DEBUG: 2023/12/13 13:41:18 No album found, using default
+DEBUG: 2023/12/13 13:41:18 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:41:18 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/13 13:41:20 No title found, using default
+DEBUG: 2023/12/13 13:41:20 No artist found, using default
+DEBUG: 2023/12/13 13:41:20 No album found, using default
+DEBUG: 2023/12/13 13:41:20 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:41:20 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
+DEBUG: 2023/12/13 13:41:22 No title found, using default
+DEBUG: 2023/12/13 13:41:22 No artist found, using default
+DEBUG: 2023/12/13 13:41:22 No album found, using default
+DEBUG: 2023/12/13 13:41:22 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]
+DEBUG: 2023/12/13 13:41:22 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]
+DEBUG: 2023/12/13 13:41:23 Moving to position 2
+DEBUG: 2023/12/13 13:41:23 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:23 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 1
+DEBUG: 2023/12/13 13:41:24 Moving to position 2
+DEBUG: 2023/12/13 13:41:24 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:24 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 1
+DEBUG: 2023/12/13 13:41:27 Song ended, moving on...
+DEBUG: 2023/12/13 13:41:27 Moving to position 1
+DEBUG: 2023/12/13 13:41:27 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:27 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
+DEBUG: 2023/12/13 13:41:27 Moving to position 1
+DEBUG: 2023/12/13 13:41:27 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:27 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
+DEBUG: 2023/12/13 13:41:28 Song ended, moving on...
+DEBUG: 2023/12/13 13:41:28 Moving to position 1
+DEBUG: 2023/12/13 13:41:28 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:28 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
+DEBUG: 2023/12/13 13:41:29 Song ended, moving on...
+DEBUG: 2023/12/13 13:41:29 Moving to position 1
+DEBUG: 2023/12/13 13:41:29 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
+DEBUG: 2023/12/13 13:41:29 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
+DEBUG: 2023/12/26 13:43:46 No title found, using default
+DEBUG: 2023/12/26 13:43:46 No artist found, using default
+DEBUG: 2023/12/26 13:43:46 No album found, using default
+DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
+DEBUG: 2023/12/26 13:43:49 Moving to position 0

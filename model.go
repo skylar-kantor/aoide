@@ -65,7 +65,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tickMsg:
 		if m.playBar.Percent() == 1.0 && len(m.playlist.Rows()) > 1 {
 			log.Default().Print("Song ended, moving on...")
-			m = m.ChangePosition(1)
+			m.ChangePosition(1)
 		}
 
 		if !paused {
@@ -116,7 +116,7 @@ func (m model) HandleKeyPress(key string) (model, tea.Cmd){
 			m.fileAdd.Reset()
 			m = m.switchFocus()
 		} else if m.playlist.Focused() {
-			m = m.ChangePosition(m.playlist.Cursor())
+			m.ChangePosition(m.playlist.Cursor())
 		}
 	}
 	return m, nil
