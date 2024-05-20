@@ -1,95 +1,216 @@
-DEBUG: 2023/12/13 13:31:31 No title found, using default
-DEBUG: 2023/12/13 13:31:31 No artist found, using default
-DEBUG: 2023/12/13 13:31:31 No album found, using default
-DEBUG: 2023/12/13 13:31:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:31:31 [[B.ogg No Artist No Album 0:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:31:33 No title found, using default
-DEBUG: 2023/12/13 13:31:33 No artist found, using default
-DEBUG: 2023/12/13 13:31:33 No album found, using default
-DEBUG: 2023/12/13 13:31:33 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:31:33 [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:31:35 Moving to position 1
-DEBUG: 2023/12/13 13:31:35 Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 0] [B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:31:35 Now, Playlist is: [[B.ogg No Artist No Album 0:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:21 No title found, using default
-DEBUG: 2023/12/13 13:36:21 No artist found, using default
-DEBUG: 2023/12/13 13:36:21 No album found, using default
-DEBUG: 2023/12/13 13:36:21 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:36:21 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:36:24 No title found, using default
-DEBUG: 2023/12/13 13:36:24 No artist found, using default
-DEBUG: 2023/12/13 13:36:24 No album found, using default
-DEBUG: 2023/12/13 13:36:24 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:36:24 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:36:26 Moving to position 1
-DEBUG: 2023/12/13 13:36:26 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:26 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:29 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:29 Moving to position 1
-DEBUG: 2023/12/13 13:36:29 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:29 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:30 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:30 Moving to position 1
-DEBUG: 2023/12/13 13:36:30 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:30 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:31 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:31 Moving to position 1
-DEBUG: 2023/12/13 13:36:31 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:31 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:32 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:32 Moving to position 1
-DEBUG: 2023/12/13 13:36:32 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:32 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:33 Moving to position 1
-DEBUG: 2023/12/13 13:36:33 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:33 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:33 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:33 Moving to position 1
-DEBUG: 2023/12/13 13:36:33 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:33 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:36:34 Song ended, moving on...
-DEBUG: 2023/12/13 13:36:34 Moving to position 1
-DEBUG: 2023/12/13 13:36:34 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 2
-DEBUG: 2023/12/13 13:36:34 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1]]. length is 1
-DEBUG: 2023/12/13 13:41:18 No title found, using default
-DEBUG: 2023/12/13 13:41:18 No artist found, using default
-DEBUG: 2023/12/13 13:41:18 No album found, using default
-DEBUG: 2023/12/13 13:41:18 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:41:18 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/13 13:41:20 No title found, using default
-DEBUG: 2023/12/13 13:41:20 No artist found, using default
-DEBUG: 2023/12/13 13:41:20 No album found, using default
-DEBUG: 2023/12/13 13:41:20 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:41:20 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1]]
-DEBUG: 2023/12/13 13:41:22 No title found, using default
-DEBUG: 2023/12/13 13:41:22 No artist found, using default
-DEBUG: 2023/12/13 13:41:22 No album found, using default
-DEBUG: 2023/12/13 13:41:22 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]
-DEBUG: 2023/12/13 13:41:22 [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]
-DEBUG: 2023/12/13 13:41:23 Moving to position 2
-DEBUG: 2023/12/13 13:41:23 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:23 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 1
-DEBUG: 2023/12/13 13:41:24 Moving to position 2
-DEBUG: 2023/12/13 13:41:24 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:24 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 1
-DEBUG: 2023/12/13 13:41:27 Song ended, moving on...
-DEBUG: 2023/12/13 13:41:27 Moving to position 1
-DEBUG: 2023/12/13 13:41:27 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:27 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
-DEBUG: 2023/12/13 13:41:27 Moving to position 1
-DEBUG: 2023/12/13 13:41:27 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:27 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
-DEBUG: 2023/12/13 13:41:28 Song ended, moving on...
-DEBUG: 2023/12/13 13:41:28 Moving to position 1
-DEBUG: 2023/12/13 13:41:28 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:28 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
-DEBUG: 2023/12/13 13:41:29 Song ended, moving on...
-DEBUG: 2023/12/13 13:41:29 Moving to position 1
-DEBUG: 2023/12/13 13:41:29 Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 0] [B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 3
-DEBUG: 2023/12/13 13:41:29 Now, Playlist is: [[B.ogg No Artist No Album 2:00 false B.ogg 1] [B.ogg No Artist No Album 2:00 false B.ogg 2]]. length is 2
-DEBUG: 2023/12/26 13:43:46 No title found, using default
-DEBUG: 2023/12/26 13:43:46 No artist found, using default
-DEBUG: 2023/12/26 13:43:46 No album found, using default
-DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/26 13:43:46 [[B.ogg No Artist No Album 2:00 false B.ogg 0]]
-DEBUG: 2023/12/26 13:43:49 Moving to position 0
+
+DEBUG: 2024/05/04 19:16:16 no tags found
+DEBUG: 2024/05/04 19:16:16 []
+DEBUG: 2024/05/04 19:17:08 ERROR: no tags found
+DEBUG: 2024/05/04 19:17:08 []
+DEBUG: 2024/05/04 19:22:09 ERROR: no tags found
+DEBUG: 2024/05/04 19:22:09 m.mp3
+DEBUG: 2024/05/04 19:22:09 []
+DEBUG: 2024/05/04 19:22:49 ERROR: no tags found
+DEBUG: 2024/05/04 19:22:49 m.mp3
+DEBUG: 2024/05/04 19:22:49 []
+DEBUG: 2024/05/04 19:23:12 ERROR: no tags found
+DEBUG: 2024/05/04 19:23:12 m.mp3
+DEBUG: 2024/05/04 19:23:12 Title is m.mp3
+DEBUG: 2024/05/04 19:23:12 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/04 19:23:12 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/04 19:23:15 Moving to position 0
+DEBUG: 2024/05/04 19:24:08 ERROR: no tags found
+DEBUG: 2024/05/04 19:24:08 m.mp3
+DEBUG: 2024/05/04 19:24:08 Title is m.mp3
+DEBUG: 2024/05/04 19:24:08 [[m.mp3    false m.mp3 0] [m.mp3    false m.mp3 1]]
+DEBUG: 2024/05/04 19:24:08 [[m.mp3    false m.mp3 0] [m.mp3    false m.mp3 1]]
+DEBUG: 2024/05/04 19:24:09 Song ended, moving on...
+DEBUG: 2024/05/04 19:24:09 Moving to position 1
+DEBUG: 2024/05/04 19:24:09 Playlist is: [[m.mp3    false m.mp3 0] [m.mp3    false m.mp3 1]]. length is 2
+DEBUG: 2024/05/04 19:24:09 Now, Playlist is: [[m.mp3    false m.mp3 1]]. length is 1
+DEBUG: 2024/05/20 11:00:11 ERROR: no tags found
+DEBUG: 2024/05/20 11:00:11 m.mp3
+DEBUG: 2024/05/20 11:00:11 Title is m.mp3
+DEBUG: 2024/05/20 11:00:11 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:00:11 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:00:13 Moving to position 0
+DEBUG: 2024/05/20 11:01:57 ERROR: no tags found
+DEBUG: 2024/05/20 11:01:57 m.mp3
+DEBUG: 2024/05/20 11:01:57 Title is m.mp3
+DEBUG: 2024/05/20 11:01:57 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:01:57 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:01:58 Moving to position 0
+DEBUG: 2024/05/20 11:02:58 Moving to position 0
+DEBUG: 2024/05/20 11:02:58 Playlist is: [[m.mp3    false m.mp3 0]]. length is 1
+DEBUG: 2024/05/20 11:02:58 Now, Playlist is: [[m.mp3    false m.mp3 0]]. length is 1
+DEBUG: 2024/05/20 11:03:09 ERROR: no tags found
+DEBUG: 2024/05/20 11:03:09 m.mp3
+DEBUG: 2024/05/20 11:03:09 Title is m.mp3
+DEBUG: 2024/05/20 11:03:09 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:03:09 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:04:07 ERROR: no tags found
+DEBUG: 2024/05/20 11:04:07 m.mp3
+DEBUG: 2024/05/20 11:04:07 Title is m.mp3
+DEBUG: 2024/05/20 11:04:07 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:04:07 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:04:17 Moving to position 0
+DEBUG: 2024/05/20 11:04:17 Already at start of list
+DEBUG: 2024/05/20 11:04:18 Moving to position 0
+DEBUG: 2024/05/20 11:04:18 Already at start of list
+DEBUG: 2024/05/20 11:04:29 Moving to position 0
+DEBUG: 2024/05/20 11:04:29 Already at start of list
+DEBUG: 2024/05/20 11:05:28 ERROR: no tags found
+DEBUG: 2024/05/20 11:05:28 m.mp3
+DEBUG: 2024/05/20 11:05:28 Title is m.mp3
+DEBUG: 2024/05/20 11:05:28 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:05:28 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:05:28 Moving to position 0
+DEBUG: 2024/05/20 11:06:20 ERROR: no tags found
+DEBUG: 2024/05/20 11:06:20 m.mp3
+DEBUG: 2024/05/20 11:06:20 Title is m.mp3
+DEBUG: 2024/05/20 11:06:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:06:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:06:26 Moving to position 0
+DEBUG: 2024/05/20 11:06:26 At start of list already
+DEBUG: 2024/05/20 11:08:10 ERROR: no tags found
+DEBUG: 2024/05/20 11:08:10 m.mp3
+DEBUG: 2024/05/20 11:08:10 Title is m.mp3
+DEBUG: 2024/05/20 11:08:10 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:08:10 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:08:17 Moving to position 0
+DEBUG: 2024/05/20 11:08:17 At start of list already
+DEBUG: 2024/05/20 11:08:17 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:25 Moving to position 0
+DEBUG: 2024/05/20 11:08:25 At start of list already
+DEBUG: 2024/05/20 11:08:25 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:26 Moving to position 0
+DEBUG: 2024/05/20 11:08:26 At start of list already
+DEBUG: 2024/05/20 11:08:26 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:27 Moving to position 0
+DEBUG: 2024/05/20 11:08:27 At start of list already
+DEBUG: 2024/05/20 11:08:27 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:28 Moving to position 0
+DEBUG: 2024/05/20 11:08:28 At start of list already
+DEBUG: 2024/05/20 11:08:28 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:29 Moving to position 0
+DEBUG: 2024/05/20 11:08:29 At start of list already
+DEBUG: 2024/05/20 11:08:29 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:30 Moving to position 0
+DEBUG: 2024/05/20 11:08:30 At start of list already
+DEBUG: 2024/05/20 11:08:30 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:31 Moving to position 0
+DEBUG: 2024/05/20 11:08:31 At start of list already
+DEBUG: 2024/05/20 11:08:31 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:32 Moving to position 0
+DEBUG: 2024/05/20 11:08:32 At start of list already
+DEBUG: 2024/05/20 11:08:32 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:34 Moving to position 0
+DEBUG: 2024/05/20 11:08:34 At start of list already
+DEBUG: 2024/05/20 11:08:34 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:08:35 Moving to position 0
+DEBUG: 2024/05/20 11:08:35 At start of list already
+DEBUG: 2024/05/20 11:08:35 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:15:18 ERROR: no tags found
+DEBUG: 2024/05/20 11:15:18 m.mp3
+DEBUG: 2024/05/20 11:15:18 Title is m.mp3
+DEBUG: 2024/05/20 11:15:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:15:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:15:19 Moving to position 0
+DEBUG: 2024/05/20 11:15:19 At start of list already
+DEBUG: 2024/05/20 11:15:20 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:16:18 ERROR: no tags found
+DEBUG: 2024/05/20 11:16:18 m.mp3
+DEBUG: 2024/05/20 11:16:18 Title is m.mp3
+DEBUG: 2024/05/20 11:16:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:16:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:16:18 Moving to position 0
+DEBUG: 2024/05/20 11:16:18 At start of list already
+DEBUG: 2024/05/20 11:16:18 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:22:09 ERROR: no tags found
+DEBUG: 2024/05/20 11:22:09 m.mp3
+DEBUG: 2024/05/20 11:22:09 Title is m.mp3
+DEBUG: 2024/05/20 11:22:09 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:22:09 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:22:18 ERROR: no tags found
+DEBUG: 2024/05/20 11:22:18 m.mp3
+DEBUG: 2024/05/20 11:22:18 Title is m.mp3
+DEBUG: 2024/05/20 11:22:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:22:18 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:22:18 Moving to position 0
+DEBUG: 2024/05/20 11:22:18 At start of list already
+DEBUG: 2024/05/20 11:22:18 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:40:32 Moving to position 0
+DEBUG: 2024/05/20 11:40:32 At start of list already
+DEBUG: 2024/05/20 11:40:32 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:40:36 Moving to position 0
+DEBUG: 2024/05/20 11:40:36 At start of list already
+DEBUG: 2024/05/20 11:40:36 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:40:38 Moving to position 0
+DEBUG: 2024/05/20 11:40:38 At start of list already
+DEBUG: 2024/05/20 11:40:38 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:40:39 Moving to position 0
+DEBUG: 2024/05/20 11:40:39 At start of list already
+DEBUG: 2024/05/20 11:40:39 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:40:39 Moving to position 0
+DEBUG: 2024/05/20 11:40:39 At start of list already
+DEBUG: 2024/05/20 11:40:40 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:47:15 Moving to time 0
+DEBUG: 2024/05/20 11:47:16 ERROR: no tags found
+DEBUG: 2024/05/20 11:47:16 m.mp3
+DEBUG: 2024/05/20 11:47:16 Title is m.mp3
+DEBUG: 2024/05/20 11:47:16 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:47:16 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:47:16 Moving to position 0
+DEBUG: 2024/05/20 11:47:16 At start of list already
+DEBUG: 2024/05/20 11:47:17 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:47:18 Moving to time 0
+DEBUG: 2024/05/20 11:47:20 Moving to time 0
+DEBUG: 2024/05/20 11:47:21 Moving to time 0
+DEBUG: 2024/05/20 11:48:20 current time is 0
+DEBUG: 2024/05/20 11:48:20 Moving to time 0
+DEBUG: 2024/05/20 11:48:20 ERROR: no tags found
+DEBUG: 2024/05/20 11:48:20 m.mp3
+DEBUG: 2024/05/20 11:48:20 Title is m.mp3
+DEBUG: 2024/05/20 11:48:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:48:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:48:21 Moving to position 0
+DEBUG: 2024/05/20 11:48:21 At start of list already
+DEBUG: 2024/05/20 11:48:21 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:48:23 current time is 2
+DEBUG: 2024/05/20 11:48:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:20 current time is 0.000000
+DEBUG: 2024/05/20 11:49:20 Moving to time 0
+DEBUG: 2024/05/20 11:49:20 ERROR: no tags found
+DEBUG: 2024/05/20 11:49:20 m.mp3
+DEBUG: 2024/05/20 11:49:20 Title is m.mp3
+DEBUG: 2024/05/20 11:49:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:49:20 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:49:21 Moving to position 0
+DEBUG: 2024/05/20 11:49:21 At start of list already
+DEBUG: 2024/05/20 11:49:21 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:49:23 current time is 1.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 0.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 0.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 0.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 0.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 1.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:23 current time is 0.000000
+DEBUG: 2024/05/20 11:49:23 Moving to time 0
+DEBUG: 2024/05/20 11:49:24 current time is 0.000000
+DEBUG: 2024/05/20 11:49:24 Moving to time 0
+DEBUG: 2024/05/20 11:49:28 current time is 4.000000
+DEBUG: 2024/05/20 11:49:28 Moving to time 0
+DEBUG: 2024/05/20 11:51:03 current time is 0.000000
+DEBUG: 2024/05/20 11:51:03 Moving to time 0, since max of 0 and 0 is 0
+DEBUG: 2024/05/20 11:51:03 ERROR: no tags found
+DEBUG: 2024/05/20 11:51:03 m.mp3
+DEBUG: 2024/05/20 11:51:03 Title is m.mp3
+DEBUG: 2024/05/20 11:51:03 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:51:03 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/20 11:51:04 Moving to position 0
+DEBUG: 2024/05/20 11:51:04 At start of list already
+DEBUG: 2024/05/20 11:51:04 Playing file. You should hear something now
+DEBUG: 2024/05/20 11:51:09 current time is 5.000000
+DEBUG: 2024/05/20 11:51:09 Moving to time 0, since max of 5 and 0 is 0

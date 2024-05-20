@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-	
+
 	"github.com/charmbracelet/bubbles/table"
 	"github.com/dhowden/tag"
 	"github.com/hajimehoshi/go-mp3"
@@ -16,13 +16,15 @@ var rows = []table.Row{}
 var player oto.Player
 func (m model) ChangePosition(newIdx int) (model, error) {
 	log.Default().Printf("Moving to position %d", newIdx)
-	if newIdx == 0 {
-		return m, nil
+	if newIdx > 0 {
+		log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
+		//Remove everything before the file we're about to play
+		m.playlist.SetRows(m.playlist.Rows()[newIdx:])
+		log.Default().Printf("Now, Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
+	} else {
+		log.Default().Print("At start of list already")
 	}
-	log.Default().Printf("Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
-	//Remove everything before the file we're about to play
-	m.playlist.SetRows(m.playlist.Rows()[newIdx:])
-	log.Default().Printf("Now, Playlist is: %v. length is %d", m.playlist.Rows(), len(m.playlist.Rows()))
+
 	//TODO Extract to separate function?
 	//Play the new file
 	fileToPlay, err := os.Open(m.playlist.Rows()[0][5])
@@ -38,11 +40,13 @@ func (m model) ChangePosition(newIdx int) (model, error) {
 		return m, err
 	}
 	<-ready
-	if player.IsPlaying() {
+	if player != nil && player.IsPlaying() {
 		player.Close()
 	}
 	player = c.NewPlayer(decodedMP3)
+	log.Default().Print("Playing file. You should hear something now")
 	player.Play()
+	paused = false
 	return m, nil
 }
 
@@ -51,30 +55,33 @@ func (m model) AddFile()  model {
 	fName := m.fileAdd.Value()
 	fTags, err := FileTags(fName)
 	if err != nil {
-		log.Default().Printf("%v", err)
-		return m
+		log.Default().Printf("ERROR: %v", err)
+		title = fName
+		log.Default().Print(title)
+	//	return m
 	} else {
 		title, artist, album, time = SongInfo(fTags)
-		if title == "No Title" {
+
+		if title == "No Title" || title == ""{
 			title = fName
 		}
+	}
+		log.Default().Printf("Title is %s", title)
 	    tableIdx := len(m.playlist.Rows())
 		rowToAdd := table.Row{title, artist, album, time, "false", fName, fmt.Sprint(tableIdx)}
 		m.playlist.SetRows(append(m.playlist.Rows(), rowToAdd))
 		log.Default().Printf("%v", m.playlist.Rows())
 		return m
-	}
-
 }
 
 func FileTags(fName string) (tag.Metadata, error) {
 	tNewMp3, err := os.Open(fName)
-	
+
 	if err != nil {
 		//log.Default().Printf("Error opening file %s: %s", fName, err)
 		return nil, err
 	}
-	defer tNewMp3.Close() 
+	defer tNewMp3.Close()
 	fTags, err := tag.ReadFrom(tNewMp3)
 	if err != nil {
 		return nil, err
@@ -88,6 +95,7 @@ func SongInfo(fTags tag.Metadata) (string,string,string, string) {
 	album := fTags.Album()
 	artist := fTags.Artist()
 	time := "2:00"
+	log.Default().Print(title)
 	if title == "" {
 		log.Default().Print("No title found, using default")
 		title = "No Title"

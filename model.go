@@ -23,7 +23,6 @@ type model struct {
 const (
 	padding  = 2
 	maxWidth = 80
-	
 )
 
 var (
@@ -34,14 +33,14 @@ var (
 	StyleTime       = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	StylePlayText   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	//StyleTitle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	StyleApp        = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(false).Render
+	StyleApp = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(false).Render
 
 	paused   = true
 	playText = StylePlayText("⏵")
 
 	totalLen   = 0
 	currentLen = 0
-	pad = strings.Repeat(" ", padding)
+	pad        = strings.Repeat(" ", padding)
 )
 
 func (m model) Init() tea.Cmd {
@@ -88,13 +87,18 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, tea.Batch(tiCmd, tblCmd)
 }
 
-func (m model) HandleKeyPress(key string) (model, tea.Cmd){
+func (m model) HandleKeyPress(key string) (model, tea.Cmd) {
 	switch key {
 	case "ctrl+c", "q":
 		return m, tea.Quit
 	case "p", " ":
 		if len(m.playlist.Rows()) > 0 && m.playlist.Rows()[0][3] != "0:00" {
-		paused = !paused
+			paused = !paused
+			if paused {
+				player.Pause()
+			} else {
+				player.Play()
+			}
 		} else {
 			return m, nil
 		}
@@ -104,9 +108,15 @@ func (m model) HandleKeyPress(key string) (model, tea.Cmd){
 			playText = "⏸"
 		}
 	case "l", ".":
+		log.Default().Printf("current time is %f", float64(currentLen))
+		prevTime := currentLen
 		currentLen = int(math.Min(float64(totalLen), float64(currentLen+5)))
+
+		log.Default().Printf("Moving to time %d, since max of %d and %d is %d", currentLen, prevTime, totalLen, int(math.Min(float64(totalLen), float64(currentLen+5))))
 	case "j", ",":
+		log.Default().Printf("current time is %f", float64(currentLen))
 		currentLen = int(math.Max(float64(0), float64(currentLen-5)))
+		log.Default().Printf("Moving to time %d", currentLen)
 	case "tab", "shift+tab":
 		m = m.switchFocus()
 	case "enter":
@@ -134,7 +144,7 @@ func (m model) switchFocus() model {
 }
 
 func (m model) View() string {
-	
+
 	timeProgress := StyleTime(fmt.Sprintf(" %02d:%02d/%02d:%02d ", currentLen/60, currentLen%60, totalLen/60, totalLen%60))
 	var nowPlaying string
 	if len(m.playlist.Rows()) > 0 {
@@ -144,7 +154,7 @@ func (m model) View() string {
 	}
 
 	playlist := StylePlaylist(lipgloss.JoinVertical(lipgloss.Left,
-		
+
 		m.playlist.View(),
 		m.fileAdd.View(),
 	))
