@@ -45,6 +45,9 @@ func (m model) ChangePosition(newIdx int) (model, error) {
 	}
 	player = c.NewPlayer(decodedMP3)
 	log.Default().Print("Playing file. You should hear something now")
+	const sampleSize = 4                    // From documentation.
+	samples := decodedMP3.Length() / sampleSize      // Number of samples.
+	totalLen = int(samples) / decodedMP3.SampleRate() // Audio length in seconds.
 	player.Play()
 	paused = false
 	return m, nil

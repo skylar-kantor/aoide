@@ -214,3 +214,19 @@ DEBUG: 2024/05/20 11:51:04 At start of list already
 DEBUG: 2024/05/20 11:51:04 Playing file. You should hear something now
 DEBUG: 2024/05/20 11:51:09 current time is 5.000000
 DEBUG: 2024/05/20 11:51:09 Moving to time 0, since max of 5 and 0 is 0
+DEBUG: 2024/05/27 12:25:22 current time is 0.000000
+DEBUG: 2024/05/27 12:25:22 Moving to time 0, since max of 0 and 0 is 0
+DEBUG: 2024/05/27 12:25:22 ERROR: no tags found
+DEBUG: 2024/05/27 12:25:22 m.mp3
+DEBUG: 2024/05/27 12:25:22 Title is m.mp3
+DEBUG: 2024/05/27 12:25:22 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/27 12:25:22 [[m.mp3    false m.mp3 0]]
+DEBUG: 2024/05/27 12:25:23 Moving to position 0
+DEBUG: 2024/05/27 12:25:23 At start of list already
+DEBUG: 2024/05/27 12:25:23 Playing file. You should hear something now
+DEBUG: 2024/05/27 12:25:27 current time is 3.000000
+DEBUG: 2024/05/27 12:25:27 Moving to time 8, since max of 3 and 244 is 13
+DEBUG: 2024/05/27 12:25:28 current time is 9.000000
+DEBUG: 2024/05/27 12:25:28 Moving to time 14, since max of 9 and 244 is 19
+DEBUG: 2024/05/27 12:25:29 current time is 15.000000
+DEBUG: 2024/05/27 12:25:29 Moving to time 20, since max of 15 and 244 is 25
