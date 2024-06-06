@@ -3,8 +3,7 @@
 
 name: Go
 env:
-  SDL_VIDEODRIVER: "dummy"
-  SDL_AUDIODRIVER: "disk"
+  SDL_AUDIODRIVER: "dummy"
 on:
   push:
     branches: [ "main" ]
