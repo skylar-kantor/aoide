@@ -45,6 +45,8 @@ func (m model) ChangePosition(newIdx int) (model, error) {
 	}
 	player = c.NewPlayer(decodedMP3)
 	log.Default().Print("Playing file. You should hear something now")
+
+	//Get the length of the audio, to enable skipping and such
 	const sampleSize = 4                    // From documentation.
 	samples := decodedMP3.Length() / sampleSize      // Number of samples.
 	totalLen = int(samples) / decodedMP3.SampleRate() // Audio length in seconds.
@@ -61,7 +63,6 @@ func (m model) AddFile()  model {
 		log.Default().Printf("ERROR: %v", err)
 		title = fName
 		log.Default().Print(title)
-	//	return m
 	} else {
 		title, artist, album, time = SongInfo(fTags)
 
@@ -81,7 +82,6 @@ func FileTags(fName string) (tag.Metadata, error) {
 	tNewMp3, err := os.Open(fName)
 
 	if err != nil {
-		//log.Default().Printf("Error opening file %s: %s", fName, err)
 		return nil, err
 	}
 	defer tNewMp3.Close()
@@ -111,6 +111,5 @@ func SongInfo(fTags tag.Metadata) (string,string,string, string) {
 		log.Default().Print("No album found, using default")
 		album = "No Album"
 	}
-	//log.Default().Printf("%s, %s, %s", title, artist, album)
 	return title, artist, album, time
 }

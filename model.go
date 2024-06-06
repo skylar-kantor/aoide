@@ -32,7 +32,6 @@ var (
 	StylePlayer     = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	StyleTime       = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	StylePlayText   = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
-	//StyleTitle      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(true).Render
 	StyleApp = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Italic(false).Render
 
 	paused   = true

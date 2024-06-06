@@ -2,10 +2,7 @@ package main
 
 import (
 	"fmt"
-	//"log"
-	//"math"
 	"os"
-	//"strings"
 	"time"
 
 	//UI Elements
